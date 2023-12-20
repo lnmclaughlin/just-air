@@ -8,11 +8,19 @@ const defaultFormFields = {
   subject: "",
   message: "",
 };
+
+const locations = {
+  region: "",
+  city: "",
+  state: "",
+  zipcode: "",
+};
+
 function App() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { firstName, lastName, email, subject, message } = formFields;
   const [buttonText, setButtonText] = useState("Submit");
-  const [zipCodeSearch, setZipCodeSearch] = useState("");
+  const [zipCodeSearch, setZipCodeSearch] = useState(""); //rename to [locationSearch, setLocationSearch] ?
 
   const resetFormFields = () => {
     //TODO
@@ -26,6 +34,9 @@ function App() {
   };
 
   //once user inputs zipcode into search, page should redirect to information on specific zipcode
+
+  //should user be able to search by city and state as well as zipcode?
+  //will the information available be specific enough to zipcode or only cover the region that zipcode is in?
   const handleZipCodeSearch = (e) => {
     //TODO
     e.preventDefault();
@@ -39,7 +50,7 @@ function App() {
     event.preventDefault();
   };
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormFields({ ...formFields, [name]: value });
   };
