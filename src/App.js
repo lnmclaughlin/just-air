@@ -11,11 +11,11 @@ const defaultFormFields = {
 function App() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { firstName, lastName, email, subject, message } = formFields;
-  //button text is for form submission not zip search
   const [buttonText, setButtonText] = useState("Submit");
   const [zipCodeSearch, setZipCodeSearch] = useState("");
 
   const resetFormFields = () => {
+    //TODO
     setFormFields(defaultFormFields);
   };
 
@@ -27,6 +27,7 @@ function App() {
 
   //once user inputs zipcode into search, page should redirect to information on specific zipcode
   const handleZipCodeSearch = (e) => {
+    //TODO
     e.preventDefault();
   };
 
@@ -34,6 +35,7 @@ function App() {
 
   //once user submits form
   const handleFormSubmit = (event) => {
+    //TODO
     event.preventDefault();
   };
 
