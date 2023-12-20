@@ -14,7 +14,7 @@ function App() {
   //button text is for form submission not zip search
   const [buttonText, setButtonText] = useState("Submit");
   const [zipCodeSearch, setZipCodeSearch] = useState("");
-  const [formData, setFormData] = useState({});
+
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
@@ -38,8 +38,8 @@ function App() {
   };
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    const { name, value } = e.target;
+    setFormFields({ ...formFields, [name]: value });
   };
 
   return (
