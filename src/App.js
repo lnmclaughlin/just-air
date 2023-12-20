@@ -20,7 +20,7 @@ function App() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { firstName, lastName, email, subject, message } = formFields;
   const [buttonText, setButtonText] = useState("Submit");
-  const [zipCodeSearch, setZipCodeSearch] = useState(""); //rename to [locationSearch, setLocationSearch] ?
+  const [zipCodeSearch, setZipCodeSearch] = useState(""); //rename this to [locationSearch, setLocationSearch] ?
 
   const resetFormFields = () => {
     //TODO
@@ -33,10 +33,10 @@ function App() {
     setButtonText("Thanks!");
   };
 
-  //once user inputs zipcode into search, page should redirect to information on specific zipcode
-
+  //once user inputs zipcode into search, page should redirect to information on specific zipcode/region
   //should user be able to search by city and state as well as zipcode?
   //will the information available be specific enough to zipcode or only cover the region that zipcode is in?
+
   const handleZipCodeSearch = (e) => {
     //TODO
     e.preventDefault();
@@ -44,7 +44,6 @@ function App() {
 
   //Form code: do you want users to have the capability to give feedback as a guest or do they need and account?
 
-  //once user submits form
   const handleFormSubmit = (event) => {
     //TODO
     event.preventDefault();
@@ -57,6 +56,9 @@ function App() {
 
   return (
     <div className="App">
+      {/* replica of navigation for adding the zipcode/location search.
+      the onClick should lead user to a new page with that specific locations information  */}
+
       <div className="nav-container">
         <div className="nav-menu">
           <img
@@ -79,6 +81,8 @@ function App() {
           </div>
         </div>
       </div>
+
+      {/* form component starts here */}
       <div className="form-container">
         <h2>Contact Us</h2>
         <form onSubmit={handleFormSubmit}>
