@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
-const locations = {
+
+export const locations = {
   region: "",
   city: "",
   state: "",
   zipcode: [""],
 };
+
 const SearchBar = () => {
   const [zipCodeSearch, setZipCodeSearch] = useState(""); //rename this to [locationSearch, setLocationSearch] ?
 
@@ -18,10 +20,12 @@ const SearchBar = () => {
     e.preventDefault();
   };
 
+
   {
     /* replica of navigation for adding the zipcode/location search.
 the onClick should lead user to a new page with that specific locations information  */
   }
+
   return (
     <div className="nav-container">
       <div className="nav-menu">
