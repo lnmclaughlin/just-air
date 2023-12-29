@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export const locations = {
   region: "",
   city: "",
@@ -7,17 +8,23 @@ export const locations = {
   zipcode: [""],
 };
 
-//once user inputs zipcode into search, page should redirect to information on specific zipcode/region
-//should user be able to search by city and state as well as zipcode?
-//will the information available be specific enough to zipcode or only cover the region that zipcode is in?
-
-export const SearchBar = () => {
+const SearchBar = () => {
   const [zipCodeSearch, setZipCodeSearch] = useState(""); //rename this to [locationSearch, setLocationSearch] ?
+
+  //once user inputs zipcode into search, page should redirect to information on specific zipcode/region
+  //should user be able to search by city and state as well as zipcode?
+  //will the information available be specific enough to zipcode or only cover the region that zipcode is in?
 
   const handleZipCodeSearch = (e) => {
     //TODO
     e.preventDefault();
   };
+
+
+  {
+    /* replica of navigation for adding the zipcode/location search.
+the onClick should lead user to a new page with that specific locations information  */
+  }
 
   return (
     <div className="nav-container">
