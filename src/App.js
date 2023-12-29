@@ -13,7 +13,7 @@ const locations = {
   region: "",
   city: "",
   state: "",
-  zipcode: "",
+  zipcode: [""],
 };
 
 function App() {
@@ -67,30 +67,35 @@ function App() {
             alt="logo"
           />
           <div className="search-bar">
-            <input
-              type="text"
-              name="zip-code"
-              className="zip"
-              placeholder="search by zipcode"
-              value={zipCodeSearch}
-            />
-            <button className="searchbtn" onClick={handleZipCodeSearch}>
-              Search
-            </button>
+            <>
+              <input
+                type="text"
+                name="zip-code"
+                className="zip"
+                placeholder="search by zipcode"
+                value={zipCodeSearch}
+              />
+              <button className="searchbtn" onClick={handleZipCodeSearch}>
+                Search
+              </button>
+            </>
+
             <i class="fa-solid fa-bars"></i>
           </div>
         </div>
       </div>
 
       {/* form component starts here */}
+      <h2>Contact Us</h2>
+
       <div className="form-container">
-        <h2>Contact Us</h2>
         <form onSubmit={handleFormSubmit}>
           <h3>First Name</h3>
           <label className="name">
             <input
               type="text"
               name="firstname"
+              placeholder="First Name"
               required
               onChange={handleInputChange}
               value={firstName}
@@ -101,6 +106,7 @@ function App() {
             <input
               type="text"
               name="lastname"
+              placeholder="Last Name"
               required
               onChange={handleInputChange}
               value={lastName}
@@ -111,6 +117,7 @@ function App() {
             <input
               type="email"
               name="email"
+              placeholder="Email"
               required
               onChange={handleInputChange}
               value={email}
@@ -121,6 +128,7 @@ function App() {
             <input
               type="subject"
               name="subject"
+              placeholder="Subject"
               required
               onChange={handleInputChange}
               value={subject}
@@ -131,6 +139,7 @@ function App() {
             <textarea
               type="text"
               name="message"
+              placeholder="Message"
               required
               onChange={handleInputChange}
               value={message}
