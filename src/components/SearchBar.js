@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 export const locations = {
   region: "",
   city: "",
@@ -19,7 +18,6 @@ const SearchBar = () => {
     //TODO
     e.preventDefault();
   };
-
 
   {
     /* replica of navigation for adding the zipcode/location search.
